@@ -1,0 +1,231 @@
+body {
+  overflow-x:hidden;
+  width:100%;
+  margin:0;
+  background-image:url(images/bg2.jpg);
+  background-size:cover;
+  background-attachment:fixed;
+  transition:opacity 0.5s;
+  opacity:0;
+  color:white;
+  font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+/* ---------------------------- UNIVERSAL ---------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color:#101010;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #876e12;
+  outline:#101010 solid;
+}
+#header {
+  width:100%;
+  height:80%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-image:url(images/bg.jpeg);
+  background-position:center;
+  background-size:cover;
+}
+#header h1 {
+  font-size:8em;
+  color:white;
+  text-shadow:0px 0px 50px #876e12;
+}
+#navBar {
+  position:relative;
+  height:8%;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:5%;
+  background-color:black;
+  z-index:10;
+}
+#navBar a {
+  text-decoration:none;
+  color:white;
+  font-size:1.5em;
+  transition:transform 0.5s, text-shadow 0.5s;
+}
+#navBar a:hover {
+  transform:scale(1.5);
+  text-shadow:0px 0px 20px white;
+}
+.subheader {
+  font-size:2em;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.mainBG {
+  width:80%;
+  margin:auto;
+  padding:20px;
+}
+.row {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:5%;
+  padding:20px;
+  border:solid 5px black;
+  box-shadow:0px 0px 50px 5px #876e12;
+}
+.row p {
+  font-size:1.5em;
+  width:45%;
+}
+.image {
+  width:45%;
+  border-radius:20px;
+}
+.row a {
+  text-decoration:none;
+  color:white;
+  font-size:1.5em;
+  transition:transform 0.5s, text-shadow 0.5s;
+}
+.row a:hover {
+  transform:scale(1.5);
+  text-shadow:0px 0px 20px white;
+}
+
+/* ---------------------------- HOMEPAGE ---------------------------- */
+
+#avatars, #descriptions, #names, #jobTitle {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  gap:5%;
+  text-align:center;
+}
+#names h2 {
+  display:block;
+  width:17%;
+  font-size:2em;
+  padding:20px;
+}
+#avatars img {
+  display:block;
+  width:17%;
+  height:500px;
+  /*background-color: rgba(135, 110, 18, 0.3);*/
+  padding:20px;
+  outline:solid 8px #303030;
+  box-shadow:0px 0px 50px 5px #876e12;
+}
+#descriptions span, #jobTitle span {
+  display:block;
+  width:17%;
+  font-size:1.5em;
+  padding:20px;
+}
+#jobTitle {
+  font-size:1.8em;
+}
+.desc {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+}
+.desc p {
+  width:60%;
+  font-size:1.5em;
+}
+
+/* ---------------------------- ANIMATIONS ---------------------------- */
+@keyframes spin{
+  0% {
+    transform: rotateX(0) rotateY(0) scale(1);
+    box-shadow:0px 0px 50px 5px #ff0000;
+  }
+  50% {
+    transform: rotateX(360deg) rotateY(540deg);
+    box-shadow:0px 0px 50px 5px #1100ff;
+  }
+  100% {
+    transform: rotateX(720deg) rotateY(1080deg);
+    box-shadow:0px 0px 50px 5px #ff0000;
+  }
+}
+@keyframes bgColor {
+  0% {
+    box-shadow:0px 0px 50px 5px #ff0000;
+  }
+  33% {
+    box-shadow:0px 0px 50px 5px #00ff00;
+  }
+  67% {
+    box-shadow:0px 0px 50px 5px #0000ff;
+  }
+  100% {
+    box-shadow:0px 0px 50px 5px #ff0000;
+  }
+}
+@keyframes flash {
+  0% {
+    box-shadow:0px 0px 10px 5px #97917d;
+  }
+  30% {
+    box-shadow:0px 0px 50px 5px #9d4bb4;
+  }
+  70% {
+    box-shadow:0px 0px 50px 5px #a32983;
+  }
+  100% {
+    box-shadow:0px 0px 10px 5px #c85151;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform:scale(1);
+  }
+  50% {
+    transform:scale(1.05);
+  }
+  100% {
+    transform:scale(1);
+  }
+}
+
+.spin {
+  animation: spin 5s infinite linear;
+}
+.bgColor {
+  animation: bgColor 5s infinite linear;
+}
+.flash {
+  animation: flash 5s infinite linear;
+}
+.pulse {
+  animation: pulse 1s infinite linear;
+}
+
+
+/* ---------------------------- PARTS AND PRICES ---------------------------- */
+
+table {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:1.2em;
+}
+tr, th, td {
+  text-align:center;
+  border:solid 5px black;
+  padding:10px;
+  width:200px;
+}
+th {
+  font-size:1.5em;
+}
